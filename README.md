@@ -52,15 +52,15 @@ $$
 
 I tried to make the $\textrm{Ax}=0$  form of non-zero least squares solution (the optimal solution is the column vector corresponding to the smallest singular value of V), so it was designed to be solved in the general form $a*x+b*y+c=0$, but because a, b, c variables are not independent unless the constraints are imposed $a^2 +b^2 +c^2 =1$, then it becomes a non-linear least squares, and so it was designed to be ineffective in the general form.
 
-For the above data set and the general formula, if slightly modified, so that c = 1, the general formula becomes $a*x+b*y+1=0$, this formula can express any plane can not cross the origin of the straight line, but the above data set to fit the straight line is obviously close to the origin, so the general formula is also invalid.
+For the above data set and the general formula, if slightly modified, so that c = 1, the general formula becomes $a\ast x+b\ast y+1=0$, this formula can express any plane can not cross the origin of the straight line, but the above data set to fit the straight line is obviously close to the origin, so the general formula is also invalid.
 
 In summary, according to the characteristics of the data set, the general formula is best designed as a form $y=k*x+b$, this formula can express any straight line in the plane can not be perpendicular to the $x$ axis. At this point the SVD solves for the non-chiral linear least squares solution $\textrm{Ax}=b$.
 
-尝试弄成$\textrm{Ax}=0$ 的齐次形式求取非零最小二乘解（**最优解是V的最小奇异值对应的列向量**）,故设计成$a*x+b*y+c=0$通用形式求解,但因为a,b,c变量并非独立，除非施加约束$a^2 +b^2 +c^2 =1$,此时变为非线性最小二乘了，故设计为一般通式无效。
+尝试弄成 $\textrm{Ax}=0$ 的齐次形式求取非零最小二乘解（**最优解是V的最小奇异值对应的列向量**）,故设计成 $a\ast x+b\ast y+c=0$, 通用形式求解,但因为a,b,c变量并非独立，除非施加约束 $a^2 +b^2 +c^2 =1$ ,此时变为非线性最小二乘了，故设计为一般通式无效。
 
-针对上述数据集和通式，如果稍微修改一下，令c=1,通式变为$a*x+b*y+1=0$，此式可以表达平面上任意不能过原点的直线，但上述数据集拟合直线明显接近原点，故此通式也无效。
+针对上述数据集和通式，如果稍微修改一下，令c=1,通式变为 $a\ast x+b\ast y +1=0$ ，此式可以表达平面上任意不能过原点的直线，但上述数据集拟合直线明显接近原点，故此通式也无效。
 
-综上所述，根据数据集特点，通式最好设计为$y=k*x+b$形式，此式可以表达平面上任意不能垂直于$x$轴的直线。此时SVD求解$\textrm{Ax}=b$的非齐次线性最小二乘解。
+综上所述，根据数据集特点，通式最好设计为 $y=k*x+b$ 形式，此式可以表达平面上任意不能垂直于 $x$ 轴的直线。此时SVD求解 $\textrm{Ax}=b$ 的非齐次线性最小二乘解。
 
 ![image_1.png](svd_fit_line_images/image_1.png)
 
